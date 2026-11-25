@@ -1,0 +1,17 @@
+<!--
+  Custom Wazuh rule: alert when PowerShell starts with an encoded command.
+  Parent rule 61603 = Sysmon Event 1 (process creation) in the stock Wazuh ruleset.
+  Custom rule ids must be 100000 or higher.
+  Installed into the manager by lab/wazuh/setup.sh.
+-->
+<group name="local,sysmon,powershell,">
+  <rule id="100200" level="10">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.image" type="pcre2">(?i)\\(powershell|pwsh)\.exe$</field>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)\s-(e|ec|en|enc|enco|encod|encode|encoded|encodedc|encodedcommand)\s+[A-Za-z0-9+/=]{20,}</field>
+    <description>PowerShell launched with an encoded command</description>
+    <mitre>
+      <id>T1059.001</id>
+    </mitre>
+  </rule>
+</group>

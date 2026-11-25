@@ -1,0 +1,360 @@
+[
+  {
+    "_id": "ev-0001",
+    "_source": {
+      "timestamp": "2026-11-25T10:01:40.112Z",
+      "agent": {
+        "id": "003",
+        "name": "WS01",
+        "ip": "10.10.10.21"
+      },
+      "manager": {
+        "name": "wazuh-manager"
+      },
+      "rule": {
+        "id": "61603",
+        "level": 0,
+        "description": "Sysmon - Event 1: Process creation",
+        "groups": [
+          "sysmon"
+        ]
+      },
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "location": "EventChannel",
+      "data": {
+        "win": {
+          "system": {
+            "eventID": "1",
+            "providerName": "Microsoft-Windows-Sysmon",
+            "computer": "WS01.lab.local",
+            "eventRecordID": "88101"
+          },
+          "eventdata": {
+            "image": "C:\\Windows\\System32\\svchost.exe",
+            "commandLine": "C:\\Windows\\system32\\svchost.exe -k netsvcs -p -s Schedule",
+            "parentImage": "C:\\Windows\\System32\\services.exe",
+            "user": "NT AUTHORITY\\SYSTEM",
+            "processId": "1880",
+            "parentProcessId": "712"
+          }
+        }
+      },
+      "full_log": "{\"win\": {\"system\": {\"eventID\": \"1\", \"providerName\": \"Microsoft-Windows-Sysmon\", \"computer\": \"WS01.lab.local\", \"eventRecordID\": \"88101\"}, \"eventdata\": {\"image\": \"C:\\\\Windows\\\\System32\\\\svchost.exe\", \"commandLine\": \"C:\\\\Windows\\\\system32\\\\svchost.exe -k netsvcs -p -s Schedule\", \"parentImage\": \"C:\\\\Windows\\\\System32\\\\services.exe\", \"user\": \"NT AUTHORITY\\\\SYSTEM\", \"processId\": \"1880\", \"parentProcessId\": \"712\"}}}"
+    }
+  },
+  {
+    "_id": "ev-0002",
+    "_source": {
+      "timestamp": "2026-11-25T10:03:55.020Z",
+      "agent": {
+        "id": "003",
+        "name": "WS01",
+        "ip": "10.10.10.21"
+      },
+      "manager": {
+        "name": "wazuh-manager"
+      },
+      "rule": {
+        "id": "61603",
+        "level": 0,
+        "description": "Sysmon - Event 1: Process creation",
+        "groups": [
+          "sysmon"
+        ]
+      },
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "location": "EventChannel",
+      "data": {
+        "win": {
+          "system": {
+            "eventID": "1",
+            "providerName": "Microsoft-Windows-Sysmon",
+            "computer": "WS01.lab.local",
+            "eventRecordID": "88102"
+          },
+          "eventdata": {
+            "image": "C:\\Program Files\\Google\\Update\\GoogleUpdate.exe",
+            "commandLine": "\"C:\\Program Files\\Google\\Update\\GoogleUpdate.exe\" /ua /installsource scheduler",
+            "parentImage": "C:\\Windows\\System32\\svchost.exe",
+            "user": "NT AUTHORITY\\SYSTEM",
+            "processId": "5012",
+            "parentProcessId": "1880"
+          }
+        }
+      },
+      "full_log": "{\"win\": {\"system\": {\"eventID\": \"1\", \"providerName\": \"Microsoft-Windows-Sysmon\", \"computer\": \"WS01.lab.local\", \"eventRecordID\": \"88102\"}, \"eventdata\": {\"image\": \"C:\\\\Program Files\\\\Google\\\\Update\\\\GoogleUpdate.exe\", \"commandLine\": \"\\\"C:\\\\Program Files\\\\Google\\\\Update\\\\GoogleUpdate.exe\\\" /ua /installsource scheduler\", \"parentImage\": \"C:\\\\Windows\\\\System32\\\\svchost.exe\", \"user\": \"NT AUTHORITY\\\\SYSTEM\", \"processId\": \"5012\", \"parentProcessId\": \"1880\"}}}"
+    }
+  },
+  {
+    "_id": "ev-0003",
+    "_source": {
+      "timestamp": "2026-11-25T10:05:02.481Z",
+      "agent": {
+        "id": "003",
+        "name": "WS01",
+        "ip": "10.10.10.21"
+      },
+      "manager": {
+        "name": "wazuh-manager"
+      },
+      "rule": {
+        "id": "61603",
+        "level": 0,
+        "description": "Sysmon - Event 1: Process creation",
+        "groups": [
+          "sysmon"
+        ]
+      },
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "location": "EventChannel",
+      "data": {
+        "win": {
+          "system": {
+            "eventID": "1",
+            "providerName": "Microsoft-Windows-Sysmon",
+            "computer": "WS01.lab.local",
+            "eventRecordID": "88110"
+          },
+          "eventdata": {
+            "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "commandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -Command Invoke-AtomicTest T1059.001 -TestNames 'PowerShell Command Execution'",
+            "parentImage": "C:\\Windows\\explorer.exe",
+            "user": "LAB\\analyst",
+            "processId": "6120",
+            "parentProcessId": "4420"
+          }
+        }
+      },
+      "full_log": "{\"win\": {\"system\": {\"eventID\": \"1\", \"providerName\": \"Microsoft-Windows-Sysmon\", \"computer\": \"WS01.lab.local\", \"eventRecordID\": \"88110\"}, \"eventdata\": {\"image\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"commandLine\": \"\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\" -NoProfile -Command Invoke-AtomicTest T1059.001 -TestNames 'PowerShell Command Execution'\", \"parentImage\": \"C:\\\\Windows\\\\explorer.exe\", \"user\": \"LAB\\\\analyst\", \"processId\": \"6120\", \"parentProcessId\": \"4420\"}}}"
+    }
+  },
+  {
+    "_id": "ev-0004",
+    "_source": {
+      "timestamp": "2026-11-25T10:05:09.733Z",
+      "agent": {
+        "id": "003",
+        "name": "WS01",
+        "ip": "10.10.10.21"
+      },
+      "manager": {
+        "name": "wazuh-manager"
+      },
+      "rule": {
+        "id": "61603",
+        "level": 0,
+        "description": "Sysmon - Event 1: Process creation",
+        "groups": [
+          "sysmon"
+        ]
+      },
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "location": "EventChannel",
+      "data": {
+        "win": {
+          "system": {
+            "eventID": "1",
+            "providerName": "Microsoft-Windows-Sysmon",
+            "computer": "WS01.lab.local",
+            "eventRecordID": "88114"
+          },
+          "eventdata": {
+            "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "commandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -e JgAgACgAZwBjAG0AIAAoACcAaQBlAHsAMAB9ACcAIAAtAGYAIAAnAHgAJwApACkAIAAoACIAVwByACIAKwAiAGkAdAAiACsAIgBlAC0ASABvAHMAdAAgACcASAAiACsAIgBlAGwAIgArACIAbABvACwAIABmAHIAIgArACIAbwBtACAAUAAiACsAIgBvAHcAIgArACIAZQByAFMAIgArACIAaAAiACsAIgBlAGwAbAAhACcAIgApAA==",
+            "parentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "parentCommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -Command Invoke-AtomicTest T1059.001 -TestNames 'PowerShell Command Execution'",
+            "user": "LAB\\analyst",
+            "processId": "7344",
+            "parentProcessId": "6120"
+          }
+        }
+      },
+      "full_log": "{\"win\": {\"system\": {\"eventID\": \"1\", \"providerName\": \"Microsoft-Windows-Sysmon\", \"computer\": \"WS01.lab.local\", \"eventRecordID\": \"88114\"}, \"eventdata\": {\"image\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"commandLine\": \"\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\" -e JgAgACgAZwBjAG0AIAAoACcAaQBlAHsAMAB9ACcAIAAtAGYAIAAnAHgAJwApACkAIAAoACIAVwByACIAKwAiAGkAdAAiACsAIgBlAC0ASABvAHMAdAAgACcASAAiACsAIgBlAGwAIgArACIAbABvACwAIABmAHIAIgArACIAbwBtACAAUAAiACsAIgBvAHcAIgArACIAZQByAFMAIgArACIAaAAiACsAIgBlAGwAbAAhACcAIgApAA==\", \"parentImage\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"parentCommandLine\": \"\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\" -NoProfile -Command Invoke-AtomicTest T1059.001 -TestNames 'PowerShell Command Execution'\", \"user\": \"LAB\\\\analyst\", \"processId\": \"7344\", \"parentProcessId\": \"6120\"}}}"
+    }
+  },
+  {
+    "_id": "ev-0005",
+    "_source": {
+      "timestamp": "2026-11-25T10:05:09.790Z",
+      "agent": {
+        "id": "003",
+        "name": "WS01",
+        "ip": "10.10.10.21"
+      },
+      "manager": {
+        "name": "wazuh-manager"
+      },
+      "rule": {
+        "id": "61603",
+        "level": 0,
+        "description": "Sysmon - Event 1: Process creation",
+        "groups": [
+          "sysmon"
+        ]
+      },
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "location": "EventChannel",
+      "data": {
+        "win": {
+          "system": {
+            "eventID": "1",
+            "providerName": "Microsoft-Windows-Sysmon",
+            "computer": "WS01.lab.local",
+            "eventRecordID": "88115"
+          },
+          "eventdata": {
+            "image": "C:\\Windows\\System32\\conhost.exe",
+            "commandLine": "\\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1",
+            "parentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "user": "LAB\\analyst",
+            "processId": "7360",
+            "parentProcessId": "7344"
+          }
+        }
+      },
+      "full_log": "{\"win\": {\"system\": {\"eventID\": \"1\", \"providerName\": \"Microsoft-Windows-Sysmon\", \"computer\": \"WS01.lab.local\", \"eventRecordID\": \"88115\"}, \"eventdata\": {\"image\": \"C:\\\\Windows\\\\System32\\\\conhost.exe\", \"commandLine\": \"\\\\??\\\\C:\\\\Windows\\\\system32\\\\conhost.exe 0xffffffff -ForceV1\", \"parentImage\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"user\": \"LAB\\\\analyst\", \"processId\": \"7360\", \"parentProcessId\": \"7344\"}}}"
+    }
+  },
+  {
+    "_id": "ev-0006",
+    "_source": {
+      "timestamp": "2026-11-25T10:05:11.004Z",
+      "agent": {
+        "id": "003",
+        "name": "WS01",
+        "ip": "10.10.10.21"
+      },
+      "manager": {
+        "name": "wazuh-manager"
+      },
+      "rule": {
+        "id": "61606",
+        "level": 0,
+        "description": "Sysmon - Event 5: Process terminated",
+        "groups": [
+          "sysmon"
+        ]
+      },
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "location": "EventChannel",
+      "data": {
+        "win": {
+          "system": {
+            "eventID": "5",
+            "providerName": "Microsoft-Windows-Sysmon",
+            "computer": "WS01.lab.local",
+            "eventRecordID": "88119"
+          },
+          "eventdata": {
+            "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "user": "LAB\\analyst",
+            "processId": "7344"
+          }
+        }
+      },
+      "full_log": "{\"win\": {\"system\": {\"eventID\": \"5\", \"providerName\": \"Microsoft-Windows-Sysmon\", \"computer\": \"WS01.lab.local\", \"eventRecordID\": \"88119\"}, \"eventdata\": {\"image\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"user\": \"LAB\\\\analyst\", \"processId\": \"7344\"}}}"
+    }
+  },
+  {
+    "_id": "ev-0007",
+    "_source": {
+      "timestamp": "2026-11-25T10:12:30.550Z",
+      "agent": {
+        "id": "003",
+        "name": "WS01",
+        "ip": "10.10.10.21"
+      },
+      "manager": {
+        "name": "wazuh-manager"
+      },
+      "rule": {
+        "id": "61603",
+        "level": 0,
+        "description": "Sysmon - Event 1: Process creation",
+        "groups": [
+          "sysmon"
+        ]
+      },
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "location": "EventChannel",
+      "data": {
+        "win": {
+          "system": {
+            "eventID": "1",
+            "providerName": "Microsoft-Windows-Sysmon",
+            "computer": "WS01.lab.local",
+            "eventRecordID": "88140"
+          },
+          "eventdata": {
+            "image": "C:\\Windows\\System32\\taskhostw.exe",
+            "commandLine": "taskhostw.exe",
+            "parentImage": "C:\\Windows\\System32\\svchost.exe",
+            "user": "LAB\\analyst",
+            "processId": "8012",
+            "parentProcessId": "1880"
+          }
+        }
+      },
+      "full_log": "{\"win\": {\"system\": {\"eventID\": \"1\", \"providerName\": \"Microsoft-Windows-Sysmon\", \"computer\": \"WS01.lab.local\", \"eventRecordID\": \"88140\"}, \"eventdata\": {\"image\": \"C:\\\\Windows\\\\System32\\\\taskhostw.exe\", \"commandLine\": \"taskhostw.exe\", \"parentImage\": \"C:\\\\Windows\\\\System32\\\\svchost.exe\", \"user\": \"LAB\\\\analyst\", \"processId\": \"8012\", \"parentProcessId\": \"1880\"}}}"
+    }
+  },
+  {
+    "_id": "ev-0101",
+    "_source": {
+      "timestamp": "2026-11-25T10:06:00.000Z",
+      "agent": {
+        "id": "004",
+        "name": "WS02",
+        "ip": "10.10.10.22"
+      },
+      "manager": {
+        "name": "wazuh-manager"
+      },
+      "rule": {
+        "id": "61603",
+        "level": 0,
+        "description": "Sysmon - Event 1: Process creation",
+        "groups": [
+          "sysmon"
+        ]
+      },
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "location": "EventChannel",
+      "data": {
+        "win": {
+          "system": {
+            "eventID": "1",
+            "providerName": "Microsoft-Windows-Sysmon",
+            "computer": "WS01.lab.local",
+            "eventRecordID": "9001"
+          },
+          "eventdata": {
+            "image": "C:\\Windows\\System32\\svchost.exe",
+            "commandLine": "svchost.exe -k LocalService",
+            "parentImage": "C:\\Windows\\System32\\services.exe",
+            "user": "NT AUTHORITY\\LOCAL SERVICE",
+            "processId": "990",
+            "parentProcessId": "700"
+          }
+        }
+      },
+      "full_log": "{\"win\": {\"system\": {\"eventID\": \"1\", \"providerName\": \"Microsoft-Windows-Sysmon\", \"computer\": \"WS01.lab.local\", \"eventRecordID\": \"9001\"}, \"eventdata\": {\"image\": \"C:\\\\Windows\\\\System32\\\\svchost.exe\", \"commandLine\": \"svchost.exe -k LocalService\", \"parentImage\": \"C:\\\\Windows\\\\System32\\\\services.exe\", \"user\": \"NT AUTHORITY\\\\LOCAL SERVICE\", \"processId\": \"990\", \"parentProcessId\": \"700\"}}}"
+    }
+  }
+]

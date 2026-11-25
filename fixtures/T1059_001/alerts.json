@@ -1,0 +1,62 @@
+[
+  {
+    "_id": "1764065109.4471",
+    "_source": {
+      "timestamp": "2026-11-25T10:05:09.733Z",
+      "agent": {
+        "id": "003",
+        "name": "WS01",
+        "ip": "10.10.10.21"
+      },
+      "manager": {
+        "name": "wazuh-manager"
+      },
+      "rule": {
+        "id": "100200",
+        "level": 10,
+        "description": "PowerShell launched with an encoded command",
+        "groups": [
+          "sysmon",
+          "local",
+          "powershell"
+        ],
+        "mitre": {
+          "id": [
+            "T1059.001"
+          ],
+          "tactic": [
+            "Execution"
+          ],
+          "technique": [
+            "PowerShell"
+          ]
+        }
+      },
+      "decoder": {
+        "name": "windows_eventchannel"
+      },
+      "location": "EventChannel",
+      "data": {
+        "win": {
+          "system": {
+            "eventID": "1",
+            "providerName": "Microsoft-Windows-Sysmon",
+            "computer": "WS01.lab.local",
+            "eventRecordID": "88114"
+          },
+          "eventdata": {
+            "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "commandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -e JgAgACgAZwBjAG0AIAAoACcAaQBlAHsAMAB9ACcAIAAtAGYAIAAnAHgAJwApACkAIAAoACIAVwByACIAKwAiAGkAdAAiACsAIgBlAC0ASABvAHMAdAAgACcASAAiACsAIgBlAGwAIgArACIAbABvACwAIABmAHIAIgArACIAbwBtACAAUAAiACsAIgBvAHcAIgArACIAZQByAFMAIgArACIAaAAiACsAIgBlAGwAbAAhACcAIgApAA==",
+            "parentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "parentCommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -Command Invoke-AtomicTest T1059.001 -TestNames 'PowerShell Command Execution'",
+            "user": "LAB\\analyst",
+            "processId": "7344",
+            "parentProcessId": "6120"
+          }
+        }
+      },
+      "full_log": "{\"win\": {\"system\": {\"eventID\": \"1\", \"providerName\": \"Microsoft-Windows-Sysmon\", \"computer\": \"WS01.lab.local\", \"eventRecordID\": \"88114\"}, \"eventdata\": {\"image\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"commandLine\": \"\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\" -e JgAgACgAZwBjAG0AIAAoACcAaQBlAHsAMAB9ACcAIAAtAGYAIAAnAHgAJwApACkAIAAoACIAVwByACIAKwAiAGkAdAAiACsAIgBlAC0ASABvAHMAdAAgACcASAAiACsAIgBlAGwAIgArACIAbABvACwAIABmAHIAIgArACIAbwBtACAAUAAiACsAIgBvAHcAIgArACIAZQByAFMAIgArACIAaAAiACsAIgBlAGwAbAAhACcAIgApAA==\", \"parentImage\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"parentCommandLine\": \"\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\" -NoProfile -Command Invoke-AtomicTest T1059.001 -TestNames 'PowerShell Command Execution'\", \"user\": \"LAB\\\\analyst\", \"processId\": \"7344\", \"parentProcessId\": \"6120\"}}}",
+      "id": "1764065109.4471"
+    }
+  }
+]
