@@ -1,0 +1,13 @@
+# Answer key for one labeled attack run.
+# Attack: Atomic Red Team T1059.001 (PowerShell with an encoded command) on WS01.
+# Ground truth: this is attacker-style execution, so the agent must NOT call it benign.
+
+id: T1059_001-encoded-powershell
+fixture_dir: fixtures/T1059_001      # used when SIEM_BACKEND=fixture
+alert_id: "1764065109.4471"
+expect:
+  verdict_in: [malicious, suspicious]
+  techniques_include: [T1059.001]
+  # The verdict must cite at least one of these events (the encoded PowerShell process,
+  # its parent, or the alert itself).
+  evidence_any_of: ["1764065109.4471", "ev-0004", "ev-0003"]

@@ -1,0 +1,30 @@
+[project]
+name = "ai-soc-lab"
+version = "0.1.0"
+description = "AI SOC triage agent: Wazuh telemetry, MCP tool servers, Claude, scored against labeled ATT&CK attacks"
+requires-python = ">=3.11"
+dependencies = [
+  "anthropic==2.14.0",
+  "mcp==2.3.0",
+  "httpx>=0.27",
+  "pydantic>=2.7",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+siem-mcp = "ai_soc.mcp_servers.siem_server:main"
+triage = "ai_soc.agent.triage:main"
+run-evals = "ai_soc.evals.run_evals:main"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
